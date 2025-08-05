@@ -10,7 +10,8 @@
     "deploy": "wrangler deploy",
     "deploy:dev": "wrangler deploy --env development",
     "deploy:prod": "wrangler deploy --env production",
-    "deploy:pages": "wrangler pages deploy dist",
+    "deploy:pages": "wrangler pages deploy dist --config wrangler.pages.toml",
+    "pages:dev": "wrangler pages dev dist --config wrangler.pages.toml",
     "wrangler:dev": "wrangler dev",
     "build": "./build.sh",
     "build:pages": "mkdir -p dist && echo 'Pages build complete'"
