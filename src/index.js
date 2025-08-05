@@ -10,6 +10,7 @@ const app = new Hono()
 app.use('*', logger())
 app.use('*', cors())
 
+// test
 // 静态文件服务
 app.use('/static/*', serveStatic({ root: './' }))
 
