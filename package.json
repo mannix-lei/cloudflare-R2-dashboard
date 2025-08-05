@@ -10,8 +10,10 @@
     "deploy": "wrangler deploy",
     "deploy:dev": "wrangler deploy --env development",
     "deploy:prod": "wrangler deploy --env production",
+    "deploy:pages": "wrangler pages deploy dist",
     "wrangler:dev": "wrangler dev",
-    "build": "./build.sh"
+    "build": "./build.sh",
+    "build:pages": "mkdir -p dist && echo 'Pages build complete'"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.859.0",

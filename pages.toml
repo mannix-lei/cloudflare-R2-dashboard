@@ -1,0 +1,34 @@
+# Cloudflare Pages Configuration
+# 这个文件告诉 Cloudflare Pages 如何构建和部署你的项目
+
+[build]
+  # 构建命令，为 Pages 环境准备文件
+  command = "npm run build:pages"
+  
+  # 构建输出目录，包含要发布的静态文件
+  publish = "dist"
+
+[build.environment]
+  # Node.js 版本
+  NODE_VERSION = "18"
+
+# Functions 配置
+[functions]
+  # 兼容性日期
+  compatibility_date = "2024-01-01"
+  
+  # 兼容性标志
+  compatibility_flags = ["nodejs_compat"]
+
+# 环境变量 (在 Cloudflare Pages 控制台中设置)
+# R2_BUCKET_NAME = "mannix"
+# R2_ACCESS_KEY_ID = "your_access_key"
+# R2_ACCESS_KEY_SECRET = "your_secret_key" 
+# R2_ENDPOINT = "your_endpoint"
+# DRAFT_DOMAIN = "https://oss.mannix.fun"
+
+# 路由配置
+[[redirects]]
+  from = "/api/*"
+  to = "/api/[[path]]"
+  status = 200
